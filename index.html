@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>自动轮播</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        #wrap{
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            height: 662px;
+        }
+        img{
+            width: 1366px;
+        }
+        figure{
+            position: absolute;
+            width: 100%;
+            height: 662px;
+            opacity: .8;
+            transition: all .5s;
+        }
+        figcaption{
+            position: absolute;
+            width: 92px;
+            height: 260px;
+            top: 50%;
+            left: 50%;
+            margin: -130px -46px 0 0;
+            font-size: 56px;
+            color: #ffffff;
+            text-align: center;
+            transition: all .5s;
+            outline: 3px solid #ffffff;
+        }
+        figcaption:hover{
+            border-radius: 15px;
+            transition: all .5s;
+        }
+        #slide{
+            position: absolute;
+            left: 35px;
+            top: 50%;
+            margin-top: -60px;
+        }
+        #slide>div{
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: forestgreen;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        #slide .active{
+            background: orangered;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <figure>
+            <img src="images/1.jpg" alt=""/>
+            <figcaption>南屏晚钟</figcaption>
+        </figure>
+        <figure>
+            <img src="images/2.jpg" alt=""/>
+            <figcaption>高山仰止</figcaption>
+        </figure>
+        <figure>
+            <img src="images/3.jpg" alt=""/>
+            <figcaption>雪域神往</figcaption>
+        </figure>
+        <figure>
+            <img src="images/4.jpg" alt=""/>
+            <figcaption>落音满地</figcaption>
+        </figure>
+        <div id="slide">
+            <div class="active"></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <script src="slider.js"></script>
+</body>
+</html>
